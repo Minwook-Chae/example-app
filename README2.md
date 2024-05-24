@@ -61,6 +61,35 @@ _If you want to see the actual [docs](https://v0.dev/docs#integrating-generated-
 
     <img src="markdown-images/errors2.png" alt="errors" style="border:3px solid red">
 
+6. Change page.tsx under project-root/src/app so it looks like this...
+
+   ```typescript
+   import { Component } from "@/components/component/component";
+
+   export default function Home() {
+     return <Component />;
+   }
+   ```
+
+    <img src="markdown-images/change-page.png" alt="new page.tsx" style="border:3px solid red">
+
 ## The Github part
 
 1. Upload the code to Github as a public repository
+
+2. Go to Settings -> Pages -> Build and deployment -> Change source to Github Actions
+
+<img src="markdown-images/change-source.png" alt="change source" style="border:3px solid red">
+
+3. Select configure on the Next.js option
+
+   If that option is not there as a suggested default, click the browse all workflows link and look under the Pages category
+   <img src="markdown-images/nextjs-config.png" alt="configure nextjs" style="border:3px solid red">
+
+4. Commit the changes
+
+5. Go to the repo's Actions tab to monitor the process and check for errors
+   <img src="markdown-images/actions.png" alt="actions tab view" style="border:3px solid red">
+
+6. You can click on the workflow to see more details
+   <img src="markdown-images/workflow-details.png" alt="workflow details" style="border:3px solid red">
